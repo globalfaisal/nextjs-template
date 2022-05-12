@@ -63,3 +63,14 @@ In order to set a standard that will be used by all contributors to the project 
 See `.eslintrc.json` and `prettierrc` files.
 
 I recommend you get the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) so that VS Code can handle the formatting of the files for you and you don't need to rely on the command line tool. Having it installed and configured in your project means that VSCode will use your project's settings, so it's still necessary to add it here.
+
+## Git Hooks
+
+The project uses [Husky](https://typicode.github.io/husky/#/)
+
+Husky is a tool for running scripts at different stages of the git process, for example add, commit, push, etc.  We would like to be able to set certain conditions, and only allow things like commit and push to succeed if our code meets those conditions, presuming that it indicates our project is of acceptable quality.
+
+See `pre-commit` and `pre-push` files in `.husky` directory.
+
+
+
