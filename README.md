@@ -24,7 +24,7 @@ Install [NVM - Node Version Manager](https://github.com/nvm-sh/nvm).
 We use NVM to make sure that all developers working on this project use the same Node engine and package manager.
 
 - `.nvmrc` -- Defines which version of Node the project is using
-- `.npmrc` - Defines which package manager the project is using
+- `.npmrc` -- Defines which package manager the project is using
 
 We are using `Node v16 Gallium` and `yarn` for this project so we set those values like so:
 
@@ -70,7 +70,25 @@ The project uses [Husky](https://typicode.github.io/husky/#/)
 
 Husky is a tool for running scripts at different stages of the git process, for example add, commit, push, etc.  We would like to be able to set certain conditions, and only allow things like commit and push to succeed if our code meets those conditions, presuming that it indicates our project is of acceptable quality.
 
-See `pre-commit` and `pre-push` files in `.husky` directory.
+See `pre-commit` and `pre-push` hooks in `.husky` directory.
 
+These hooks ensures that we are not allowed to push to the remote repository unless our code can successfully build.
 
+### Commit Message Convension
+
+We use [Commitlint](https://github.com/conventional-changelog/commitlint). To lint commits before they are created and to ensure that every contributor to this project is following  a set of standard conventions for commit messages.
+
+__IMPORTANT__  the following are the required commit message prefixes:
+
+- `build:`  Changes that affect the build system or external dependencies (example - scopes: gulp, broccoli, npm)
+- `ci:`  Changes to our CI configuration files and scripts (example - scopes  Travis, Circle, BrowserStack, SauceLabs)
+- `docs:`  Documentation only changes
+- `feat:`  A new feature
+- `fix:`  A bug fix
+- `perf:`  A code change that improves performance
+- `refactor:`  A code change that neither fixes a bug nor adds a feature
+- `style:`  Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `test:`  Adding missing tests or correcting existing tests
+
+See all the configurations for commitlint in `commitlint.config.js` file.
 

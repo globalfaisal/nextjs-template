@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+echo " 🐾 Running husky [commit-msg] hooks "
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+echo "👀 Please see all the rules of commit messages in 'commit.config.js' file"
+
+npx --no -- commitlint --edit "\${1}"
