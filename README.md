@@ -18,7 +18,6 @@ yarn dev
 
 You should see the demo app available on [http://localhost:3000](http://localhost:3000)
 
-
 ## Engine Locking
 
 Install [NVM - Node Version Manager](https://github.com/nvm-sh/nvm).
@@ -53,3 +52,14 @@ Note that the use of `engine-strict` doesn't specifically say anything about `ya
   },
   ...
 ```
+
+## Code Formatting and Quality Tools
+
+In order to set a standard that will be used by all contributors to the project to keep the code style consistent and basic best practices followed, we will be implementing two tools:
+
+- [eslint](https://eslint.org/) - For best practices on coding standards
+- [prettier](https://prettier.io/) - For automatic formatting of code files
+
+See `.eslintrc.json` and `prettierrc` files.
+
+I recommend you get the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) so that VS Code can handle the formatting of the files for you and you don't need to rely on the command line tool. Having it installed and configured in your project means that VSCode will use your project's settings, so it's still necessary to add it here.
