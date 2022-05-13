@@ -68,7 +68,7 @@ I recommend you get the [Prettier VS Code extension](https://marketplace.visuals
 
 The project uses [Husky](https://typicode.github.io/husky/#/)
 
-Husky is a tool for running scripts at different stages of the git process, for example add, commit, push, etc.  We would like to be able to set certain conditions, and only allow things like commit and push to succeed if our code meets those conditions, presuming that it indicates our project is of acceptable quality.
+Husky is a tool for running scripts at different stages of the git process, for example add, commit, push, etc. We would like to be able to set certain conditions, and only allow things like commit and push to succeed if our code meets those conditions, presuming that it indicates our project is of acceptable quality.
 
 See `pre-commit` and `pre-push` hooks in `.husky` directory.
 
@@ -76,19 +76,24 @@ These hooks ensures that we are not allowed to push to the remote repository unl
 
 ### Commit Message Convension
 
-We use [Commitlint](https://github.com/conventional-changelog/commitlint). To lint commits before they are created and to ensure that every contributor to this project is following  a set of standard conventions for commit messages.
+We use [Commitlint](https://github.com/conventional-changelog/commitlint). To lint commits before they are created and to ensure that every contributor to this project is following a set of standard conventions for commit messages.
 
-__IMPORTANT__  the following are the required commit message prefixes:
+**IMPORTANT** the following are the required commit message prefixes:
 
-- `build:`  Changes that affect the build system or external dependencies (example - scopes: gulp, broccoli, npm)
-- `ci:`  Changes to our CI configuration files and scripts (example - scopes  Travis, Circle, BrowserStack, SauceLabs)
-- `docs:`  Documentation only changes
-- `feat:`  A new feature
-- `fix:`  A bug fix
-- `perf:`  A code change that improves performance
-- `refactor:`  A code change that neither fixes a bug nor adds a feature
-- `style:`  Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- `test:`  Adding missing tests or correcting existing tests
+- `build:` Changes that affect the build system or external dependencies (example - scopes: gulp, broccoli, npm)
+- `ci:` Changes to our CI configuration files and scripts (example - scopes Travis, Circle, BrowserStack, SauceLabs)
+- `docs:` Documentation only changes
+- `feat:` A new feature
+- `fix:` A bug fix
+- `perf:` A code change that improves performance
+- `refactor:` A code change that neither fixes a bug nor adds a feature
+- `style:` Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `test:` Adding missing tests or correcting existing tests
 
 See all the configurations for commitlint in `commitlint.config.js` file.
 
+## Vs Code settings and Debugging
+
+We added a set of specific settings that only apply to this project, that is shared with the rest of our teams by including them in the code repository.
+Also a convenient environment for debugging our application in case we run into any issues during development and
+See `launch.json` and `settings.json` inside `.vscode` directory
