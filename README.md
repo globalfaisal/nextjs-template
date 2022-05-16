@@ -66,13 +66,17 @@ I recommend you get the [Prettier VS Code extension](https://marketplace.visuals
 
 ## Git Hooks
 
-The project uses [Husky](https://typicode.github.io/husky/#/)
+It's strongly recommend that you don't only rely on "format on save" VSCode features, but you also add another layer of safety by running eslint and prettier on each commit. That will make sure that every file we commit has no ESLint error and are correctly formatted. Also, we run additional checks on commit, like TypeScript type-checking.
 
-Husky is a tool for running scripts at different stages of the git process, for example add, commit, push, etc. We would like to be able to set certain conditions, and only allow things like commit and push to succeed if our code meets those conditions, presuming that it indicates our project is of acceptable quality.
+One way of achieving this is by using:
+
+[Husky](https://typicode.github.io/husky/#/): a tool for running scripts at different stages of the git process, for example add, commit, push, etc.
 
 See `pre-commit` and `pre-push` hooks in `.husky` directory.
 
-These hooks ensures that we are not allowed to push to the remote repository unless our code can successfully build.
+[Lintstaged](https://github.com/okonet/lint-staged): to only run lint scripts when necessary, and only on the necessary files.
+
+See `lint-staged.config.js` file.
 
 ### Commit Message Convension
 
@@ -95,5 +99,6 @@ See all the configurations for commitlint in `commitlint.config.js` file.
 ## Vs Code settings and Debugging
 
 We added a set of specific settings that only apply to this project, that is shared with the rest of our teams by including them in the code repository.
-Also a convenient environment for debugging our application in case we run into any issues during development and
+Also a convenient environment for debugging our application in case we run into any issues during development.
+
 See `launch.json` and `settings.json` inside `.vscode` directory

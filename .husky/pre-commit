@@ -4,5 +4,6 @@
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo " 🐾 Running husky [pre-commit] hooks "
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+echo "👀 See the configurations for lint-staged in 'lint-staged.config.js' file"
 
-yarn lint
+yarn precommit

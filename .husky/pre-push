@@ -4,5 +4,6 @@
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo " 🐾 Running husky [pre-push] hooks "
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+echo "📦 Trying to buld the project befor pushing to github"
 
 yarn build
