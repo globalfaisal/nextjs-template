@@ -1,7 +1,6 @@
 .vscode
 .yarn
 .next
-
+CODEOWNERS
 node_modules
-
 dist

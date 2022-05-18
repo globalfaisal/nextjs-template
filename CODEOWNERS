@@ -1,0 +1,3 @@
+# These owners will be the default owners for everything in the repo.
+# A review will be requested automatically when someone opens a pull request.
+# <!-- *  @username | example@email.com -->
